@@ -1,0 +1,54 @@
+<div id="thanks" class="modal">
+  <div class="container">
+    <div class="modal__block_wrapper modal__thanks_wrapper">
+      <div class="modal__block">
+        <div class="thanks_close modal_close">
+          {{mixins.icon('cancel')}}
+        </div>
+        <div class="modal__thanks">
+          <h3>Спасибо за заказ</h3>
+          <p>Скоро мы Вам перезвоним!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modal" class="modal">
+  <div class="container">
+    <div class="modal__block_wrapper">
+      <div class="modal__block modal__block_form">
+        <div class="modal_close">
+          {{mixins.icon('cancel')}}
+        </div>
+        <div class="modal__form">
+          <h3>Заказать звонок</h3>
+          <p>
+            Заполните форму и менеджер свяжется с
+            вами в течении 15 минут!
+          </p>
+          <form action="sendmail.php" method="get" class="form form-repair">
+            <div class="label__wrapper">
+              <label>
+                <input type="text" name="name" placeholder="Введите Ваше имя" required>
+              </label>
+            </div>
+            <div class="label__wrapper">
+              <label>
+                <input type="tel" name="tel" placeholder="Введите Ваш телефон" required>
+              </label>
+            </div>
+            <button class="button">Заказать звонок</button>
+            <div class="label__wrapper">
+              <input type="checkbox" value="agree" id="agree" name="agree" class="checkbox" checked required>
+              <label for="agree" class="label__checkbox"> Нажимая на кнопку «Заказать звонок»,
+                я соглашаюсь с <span>условиями</span> </label>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

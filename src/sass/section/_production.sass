@@ -1,0 +1,65 @@
+.production
+	position: relative
+	padding: 60px 0 70px
+	background: $bright-sun
+	+r(576)
+		padding: 30px 0
+
+	.title
+		+r(768)
+			margin-bottom: 30px
+		+r(576)
+			margin-bottom: 10px
+	.headline
+		top: 230px
+		+r(1200)
+			font-size: 3.8em
+			top: 235px
+		+r(992)
+			top: 200px
+	&__info
+		margin-bottom: 90px
+		+r(1200)
+			br
+				display: none
+		+r(992)
+			margin-bottom: 30px
+		p
+			margin-bottom: 30px
+			max-width: 50%
+			font-weight: 600
+			font-size: 1.142855em
+			line-height: 1.5em
+			color: $mine-shaft-two
+			+r(992)
+				max-width: 100%
+				margin-bottom: 10px
+			&:nth-of-type(1)
+				margin-left: 50%
+				+r(992)
+					margin-left: 0
+	&__wrapper
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&__block
+		+r(1200)
+			margin-bottom: 50px
+		+r(992)
+			width: 100%
+		img
+			box-shadow: 0 10px 31px 0 rgba(0, 0, 0, 0.3)
+			max-width: 370px
+			max-height: 270px
+			width: 100%
+			height: 100%
+			object-fit: cover
+			display: block
+			margin-bottom: 20px
+			+r(992)
+				max-width: none
+				width: 100%
+		h3
+			font-weight: 600
+			font-size: 1.3125em
+			color: $mine-shaft

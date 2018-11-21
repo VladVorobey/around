@@ -1,0 +1,35 @@
+.gallery
+	position: relative
+	padding: 60px 0 140px
+	background: $bright-sun
+	+r(768)
+		padding: 60px 0
+	+r(576)
+		padding: 30px 0
+	img
+		display: block
+		margin: 0 auto
+	&__wrapper
+		img
+			width: 100%
+			max-width: 270px
+			height: 408px
+			object-fit: cover
+	.headline
+		right: 30%
+		top: 15%
+		+r(1200)
+			right: 12%
+		+r(992)
+			right: 5%
+			top: 20%
+		+r(576)
+			right: 0
+			font-size: 4em
+.swiper-button-next
+	background-image: url("../img/right-arrow.svg")
+.swiper-button-prev
+	background-image: url('../img/left-arrow.svg')
+.swiper-button-prev,.swiper-button-next
+	background-size: 40px 44px
+	width: 40px

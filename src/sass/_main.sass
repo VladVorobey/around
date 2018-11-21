@@ -1,0 +1,67 @@
+html, body
+	font-family: $default-font
+	font-weight: 400
+	font-style: normal
+	font-size: 14px
+	line-height: 1.5em
+	overflow-x: hidden
+	position: relative
+	min-width: 320px
+	min-height: 5000px
+*
+	margin: 0
+	padding: 0
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+a,
+a:focus,
+a:hover
+	outline: none
+	text-decoration: none
+input[type="text"], input[type="tel"]
+	border: 1px solid $silver-chalice
+	color: $silver-chalice
+	border-radius: 10px
+	line-height: $line-height-auto
+	padding: 14px 30px
+	box-shadow: none
+	font-family: $default-font
+	font-weight: 400
+	width: 100%
+	max-width: 200px
+	background: transparent
+	outline: none
+	-webkit-appearance: none
+	-moz-appearance: none
+	&::placeholder
+		color: $silver-chalice
+		font-size: 1em
+		font-weight: 400
+	&:focus:required:invalid
+		color: $silver-chalice
+		border-color: red
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+		font-size: 1em
+	&:focus:required:valid
+		border-color: $aqua
+		color: $silver-chalice
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+		font-size: 1em
+	&:required:invalid
+		color: $silver-chalice
+		border-color: $silver-chalice
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+		font-size: 1em
+	&:required:valid
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+		font-size: 1em

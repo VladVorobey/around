@@ -1,0 +1,84 @@
+#map
+	width: 100%
+	height: 450px
+	+r(768)
+		height: 300px
+.map
+	position: relative
+.contacts
+	position: absolute
+	top: 110px
+	left: 20%
+	background: $white
+	box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.12)
+	padding: 35px
+	max-width: 500px
+	+r(768)
+		position: relative
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		max-width: none
+	h2
+		font-size: 1.857142em
+		text-transform: uppercase
+		letter-spacing: -0.05em
+		margin-bottom: 25px
+	&__wrapper
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	&__block
+		display: flex
+		flex-direction: column
+		padding-left: 25px
+		font-size: 1.142855em
+		color: $mine-shaft
+		margin-bottom: 10px
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			width: 15px
+			height: 15px
+			left: 0
+			top: 5px
+		h3
+			font-size: 1.142855em
+		span
+			font-weight: 700
+		a
+			color: $mine-shaft
+			&:hover
+				text-decoration: underline
+		&:nth-child(even)
+			width: 55%
+			+r(576)
+				width: 100%
+		&:nth-child(odd)
+			width: 45%
+			+r(576)
+				width: 100%
+		&:nth-child(1)
+			&:before
+				content: url('../img/tell.svg')
+		&:nth-child(2)
+			&:before
+				content: url('../img/home.svg')
+				width: 20px
+				height: 20px
+		&:nth-child(3)
+			&:before
+				content: url('../img/mail.svg')
+				width: 15px
+				height: 15px
+		&:nth-child(4)
+			&:before
+				content: url('../img/local.svg')
+				width: 20px
+				height: 20px
+
+		img
+			max-width: 110px
+			height: auto

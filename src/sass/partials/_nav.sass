@@ -1,0 +1,208 @@
+.nav
+	position: absolute
+	left: 0
+	right: 0
+	top: 0
+	padding: 15px 0
+	z-index: 1000
+	&__wrapper
+		display: flex
+		justify-content: space-between
+		align-items: start
+
+	a
+		z-index: 1010
+		img.logo
+			width: 165px
+			height: auto
+			padding: 12px 0
+			z-index: 1010
+			margin-right: 78px
+	a
+		display: block
+		color: $white
+	ul
+		display: flex
+		+r(992)
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			a
+				padding: 0
+
+		li
+			font-weight: 600
+			&:not(&:last-child)
+				margin-right: 30px
+			a
+				padding: 22px 0
+				position: relative
+				display: block
+				&::before
+					content: ''
+					position: absolute
+					transform: scale(0)
+					transition: all .3s
+					bottom: 20px
+					left: 0
+					width: 100%
+					height: 2px
+					background-color: $aqua
+				&:hover, &:focus
+					&::before
+						transform: scale(1)
+
+	&__button
+		z-index: 1100
+		+r(1200)
+			position: relative
+			background: transparent
+			transform: translateY(30%)
+			width: 40px
+			height: 40px
+			&.active
+				.nav__bar
+					background: transparent
+					&::before
+						left: 0
+						top: 0
+						transform: rotate(135deg)
+					&::after
+						right: 0
+						top: 0
+						transform: rotate(220deg)
+	&__bar
+		+r(1200)
+			position: absolute
+			width: 40px
+			height: 4px
+			background: $white
+			top: 50%
+			transform: translateY(-50%)
+			transition: all .3s ease
+			&::before, &::after
+				content: ''
+				position: absolute
+				width: 40px
+				height: 4px
+				left: 0
+				background: $white
+				transition: all .3s ease
+			&::before
+				top: 10px
+			&::after
+				top: -10px
+
+
+	.callback-info
+		display: flex
+		flex-direction: column
+		text-align: right
+		a
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+		.tel
+			font-size: 1.285715em
+			margin-bottom: 3px
+			a
+				text-decoration: none
+				position: relative
+				&:hover
+					text-decoration: underline
+				&:first-of-type
+					&::before
+						content: url("../img/tell.svg")
+						position: absolute
+						width: 15px
+						height: 15px
+						left: -27px
+						top: 50%
+						transform: translateY(-50%)
+			span
+				font-weight: 700
+		.mail
+			font-size: 1.142855em
+			margin-top: 10px
+			position: relative
+			a
+				&:first-of-type
+					&::before
+						content: url("../img/mail.svg")
+						position: absolute
+						width: 15px
+						height: 15px
+						left: -27px
+						top: 50%
+						transform: translateY(-50%)
+	&__adaptive
+		display: flex
+		justify-content: space-between
+		width: 100%
+		+r(1200)
+			display: flex
+			position: absolute
+			width: 100%
+			height: 100vh
+			padding: 100px 0
+			left: 0
+			right: 0
+			top: 0
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			background: rgba(0, 0, 0, 0.9)
+			transform: translateX(-100%)
+			transition: all .5s ease
+			ul
+				margin-bottom: 80px
+			li
+				opacity: 0
+			.callback-info
+				opacity: 0
+			&.active
+				transform: translateX(0)
+				li
+					opacity: 1
+				.callback-info
+					opacity: 1
+					flex-direction: row
+					justify-content: space-around
+					align-items: center
+					width: 60%
+		+r(992)
+			display: block
+			overflow: auto
+			justify-content: flex-start
+			padding: 100px 0 50px
+			ul
+				margin-bottom: 30px
+				li
+					margin-right: 0
+					a
+						padding: 10px 0
+						&::before
+							bottom: 10px
+			&.active
+				.callback-info
+					flex-direction: column
+					justify-content: space-around
+					align-items: center
+					width: 100%
+
+	&.scroll
+		position: fixed
+		background: rgba(0, 0, 0, .7)
+		padding: 5px
+		transition: all .6s ease
+		&.active
+			background: transparent
+		.mail
+			display: none
+		.nav__adaptive
+			&.active
+				.mail
+					display: block
+.logo
+	width: 180px
+	height: 70px

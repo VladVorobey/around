@@ -1,0 +1,83 @@
+.technique
+	position: relative
+	padding: 100px 0 30px
+	+r(768)
+		padding: 60px 0 0
+	+r(576)
+		padding: 30px 0 0
+	.headline
+		top: 190px
+		max-width: 300px
+		right: 25%
+		+r(1200)
+			max-width: none
+			right: 5%
+	.swiper-container
+		padding: 0 10px 70px
+		+r(576)
+			padding: 0 10px 30px
+	.swiper-button-next, .swiper-button-prev
+		top: 20%
+		+rmin(1200)
+			display: none
+	.title
+		margin-bottom: 50px
+		+r(768)
+			margin-bottom: 40px
+		+r(576)
+			margin-bottom: 15px
+	span
+		display: block
+		max-width: 500px
+		margin-left: 30px
+		font-weight: 600
+		font-size: 1.5em
+		color: $mine-shaft
+		margin-bottom: 55px
+		+r(1200)
+			max-width: none
+			margin-left: 0
+		+r(768)
+			margin-bottom: 30px
+		+r(576)
+			margin-bottom: 20px
+	&__block
+		background: transparent
+		transition: all .3s ease
+		cursor: pointer
+		max-width: 270px!important
+		+r(768)
+			margin: 0 auto
+		&_text
+			padding: 20px 20px 30px
+			color: $mine-shaft
+		img
+			width: 100%
+			max-width: 270px
+			height: 200px
+			object-fit: cover
+			margin-bottom: 15px
+
+		h3
+			font-weight: 700
+			font-size: 1.5em
+			line-height: 1em
+			margin-bottom: 10px
+		p
+			font-size: 1em
+			line-height: 1.5em
+			margin-bottom: 30px
+		.button__wrapper
+			text-align: center
+			opacity: 0
+			transition: ease all .3s
+			display: none
+			+r(1024)
+				display: block
+				opacity: 1
+		&:hover
+			background: $white
+			box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.1)
+			.button__wrapper
+				opacity: 1
+				display: block

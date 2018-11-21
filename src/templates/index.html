@@ -1,0 +1,28 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% include "partials/_header.html" %}
+  {% include "partials/_form.html" %}
+  <main>
+    {% include "partials/_choice.html" %}
+    {% include "partials/_gallery.html" %}
+    {% include "partials/_clothes.html" %}
+    {% include "partials/_tabs.html" %}
+    {% include "partials/_about-us.html" %}
+    {% include "partials/_production.html" %}
+    {% include "partials/_technique.html" %}
+    {% include "partials/_quality.html" %}
+    {% include "partials/_work.html" %}
+    {% include "partials/_second-form.html" %}
+    {% include "partials/_map.html" %}
+  </main>
+  {% include "partials/_footer.html" %}
+  {% include "partials/_modal.html" %}
+	<!--{# mixin example #}-->
+	<!--{{mixins.icon('facebook')}}-->
+
+{% endblock %}

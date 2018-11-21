@@ -1,0 +1,71 @@
+.header
+	position: relative
+	background: $white center no-repeat
+	background-size: cover
+	color: $white
+	padding: 205px 0 180px
+	+r(768)
+		padding: 150px 0 90px
+	+r(576)
+		padding: 120px 0 30px
+	&__title
+		max-width: 870px
+		margin-bottom: 75px
+		h1
+			font-weight: 700
+			font-size: 2.8571428em
+			line-height: $line-height-auto
+			text-transform: uppercase
+			margin-bottom: 50px
+			+r(576)
+				font-size: 2.3em
+				margin-bottom: 25px
+		h2
+			font-weight: 400
+			font-size: 1em
+			line-height: $line-height-standart
+			padding-left: 69px
+			position: relative
+			margin-bottom: 15px
+			+r(576)
+				font-size: 0.9em
+			&::before
+				content: ''
+				width: 50px
+				height: 2px
+				background: $aqua
+				position: absolute
+				left: 0
+				top: 50%
+				transform: translateY(-50%)
+		p
+			font-size: 1em
+			position: relative
+			+r(576)
+				font-size: 0.9em
+			&::before
+				content: '*'
+	&__info
+		ul
+			display: flex
+			width: 100%
+			max-width: 1130px
+			justify-content: space-between
+			flex-wrap: wrap
+			li
+				font-size: 1.142855em
+				font-weight: 600
+				line-height: $line-height-for-16px
+				padding-left: 15px
+				max-width: 230px
+				position: relative
+				+r(576)
+					font-size: 1em
+				&:not(&:last-child)
+					margin-bottom: 10px
+				&::before
+					content: '+'
+					color: $aqua
+					position: absolute
+					left: 0
+					top: 0

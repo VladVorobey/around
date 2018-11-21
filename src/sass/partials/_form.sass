@@ -1,0 +1,56 @@
+.form-callback
+	position: relative
+	padding: 40px 0
+	&__transform
+		padding: 0
+		.form__wrapper
+			transform: translateY(-60px)
+			+r(576)
+				transform: translateY(0)
+	&__wrapper
+		max-width: 880px
+		margin: 0 auto
+	&__bg
+		background: url('../img/form-bg.jpg')
+.form
+	max-width: 670px
+	display: flex
+	justify-content: space-between
+	margin: 0 auto
+	flex-wrap: wrap
+	+r(992)
+		justify-content: center
+		input
+			margin: 0 auto 30px
+		.button
+			margin: 0 auto
+	+r(767)
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		input
+			margin: 0 auto 30px
+	&__wrapper
+		width: 100%
+		padding: 60px 55px
+		background: $white
+		border-radius: 5px
+		position: relative
+		box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.05);
+		+r(768)
+			padding: 40px 20px
+		+r(576)
+			box-shadow: none
+			border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+			padding: 30px 10px
+		h2
+			text-transform: uppercase
+			font-size: 1.8571428em
+			letter-spacing: -0.05em
+			font-weight: 700
+			margin-bottom: 35px
+			text-align: center
+			+r(768)
+				font-size: 1.5em
+			+r(576)
+				font-size: 1.3em
